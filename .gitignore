@@ -3,3 +3,4 @@
 .vagrant
 dev.log
 prod.log
+web/bower_components/
