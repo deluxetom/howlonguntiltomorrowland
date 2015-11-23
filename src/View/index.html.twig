@@ -1,0 +1,57 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-xs-12 text-center">
+            <ul class="nav nav-pills">
+                <li {% if location == 'belgium' %}class="active"{% endif %}>
+                    <a href="{{ path('home', {location: 'belgium'}) }}">
+                        <span class="hidden-xs">Tomorrowland</span> Belgium
+                    </a>
+                </li>
+                <li {% if location == 'usa' %}class="active"{% endif %}>
+                    <a href="{{ path('home', {location: 'usa'}) }}">
+                        Tomorrowworld
+                    </a>
+                </li>
+                <li {% if location == 'brazil' %}class="active"{% endif %}>
+                    <a href="{{ path('home', {location: 'brazil'}) }}">
+                        <span class="hidden-xs">Tomorrowland</span> Brazil
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row countdown">
+        <div class="col-xs-12 text-center" style="padding-top:10px">
+            {{ s.where }} {% if s.date %}({{ s.date }}){% endif %}
+        </div>
+        {% if s.date %}
+        <div class="col-md-3 col-xs-6">
+            <div class="du">
+                <div class="dt">{{ ct.m }}</div>
+                <div class="dm">months</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <div class="du">
+                <div class="dt">{{ ct.d }}</div>
+                <div class="dm">days</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <div class="du">
+                <div class="dt">{{ ct.h }}</div>
+                <div class="dm">hours</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <div class="du">
+                <div class="dt">{{ ct.m }}</div>
+                <div class="dm">minutes</div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

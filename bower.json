@@ -1,0 +1,24 @@
+{
+  "name": "howlonguntiltomorrowland.com",
+  "authors": [
+    "Thomas Picquet <thomas@sctr.net>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://www.howlonguntiltomorrowland.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "jquery-tubular": "*"
+  }
+}
